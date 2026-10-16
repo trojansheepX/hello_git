@@ -1,4 +1,4 @@
 def calculate_distance(speed, hours):
     return speed * hours
 
-print("Distance:", calculate_distance(45, 2))
+print("Distance:", calculate_distance(55, 2))
