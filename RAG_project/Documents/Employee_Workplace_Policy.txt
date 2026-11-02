@@ -1,0 +1,18 @@
+CEDARLINE SYSTEMS - EMPLOYEE WORKPLACE POLICY
+Training document | Version 1.0
+This is a fictional company and all policies below are sample data for a RAG exercise.
+
+1. WORKING HOURS
+The normal working schedule is Monday through Friday, from 9:00 AM to 5:30 PM. Employees receive a 45-minute lunch break. Attendance must be updated through the employee portal before the end of the day.
+
+2. HYBRID WORK
+Employees must work from the office on Tuesdays and Thursdays. They may work remotely on Mondays, Wednesdays, and Fridays with approval from their manager. Team meetings may require additional office attendance.
+
+3. ANNUAL LEAVE
+Full-time employees receive 16 days of paid annual leave each calendar year. Leave requests should be submitted in the employee portal at least seven calendar days before the requested dates. A manager normally responds within three working days.
+
+4. SICK LEAVE
+Employees receive six paid sick-leave days per calendar year. Employees should notify their manager on the first day of illness. A medical certificate is required if the absence is three consecutive working days or more.
+
+5. EXPENSE CLAIMS
+Approved business travel expenses can be claimed through the employee portal. Receipts must be submitted within 14 calendar days after the trip. Manager approval is required before reimbursement.

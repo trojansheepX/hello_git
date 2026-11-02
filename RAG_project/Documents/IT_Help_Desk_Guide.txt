@@ -1,0 +1,18 @@
+CEDARLINE SYSTEMS - IT HELP DESK GUIDE
+Training document | Version 1.0
+This is a fictional company and the procedures below are sample data for a RAG exercise.
+
+1. REQUESTING IT SUPPORT
+Employees should open an IT ticket through the internal Help Desk portal. Each ticket must include a short issue description, the affected device or application, and an urgency level. The portal provides a ticket reference number.
+
+2. PASSWORD RESETS
+Employees who forget their password should use the self-service password reset option on the company sign-in page. If self-service reset fails, they should create an IT support ticket. Employees must never share passwords with other people.
+
+3. LOST OR STOLEN DEVICES
+A lost or stolen company laptop must be reported to the IT Help Desk within one hour of discovery. The employee should also notify their reporting manager. IT will take appropriate steps to secure company accounts and data.
+
+4. SUPPORT RESPONSE TIMES
+Priority 1 incidents, such as a company-wide service outage, receive an initial response within 30 minutes. Priority 2 issues receive an initial response within four working hours. Normal support requests receive an initial response within one working day.
+
+5. SOFTWARE REQUESTS
+Employees must request new software through the Help Desk portal. IT reviews licensing and security requirements before installation. Installing unapproved software on company devices is not permitted.

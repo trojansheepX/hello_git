@@ -1,0 +1,5 @@
+tiktoken
+sentence-transformers
+chromadb
+requests
+python-dotenv
