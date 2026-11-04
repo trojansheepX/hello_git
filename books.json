@@ -1,0 +1,51 @@
+[
+  {
+    "id": 101,
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "category": "Programming",
+    "available_copies": 3
+  },
+  {
+    "id": 102,
+    "title": "Automate the Boring Stuff with Python",
+    "author": "Al Sweigart",
+    "category": "Programming",
+    "available_copies": 2
+  },
+  {
+    "id": 103,
+    "title": "Fluent Python",
+    "author": "Luciano Ramalho",
+    "category": "Programming",
+    "available_copies": 0
+  },
+  {
+    "id": 104,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell and Peter Norvig",
+    "category": "Artificial Intelligence",
+    "available_copies": 1
+  },
+  {
+    "id": 105,
+    "title": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+    "author": "Aurelien Geron",
+    "category": "Artificial Intelligence",
+    "available_copies": 2
+  },
+  {
+    "id": 106,
+    "title": "Deep Learning",
+    "author": "Ian Goodfellow, Yoshua Bengio and Aaron Courville",
+    "category": "Artificial Intelligence",
+    "available_copies": 0
+  },
+  {
+    "id": 107,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Software Engineering",
+    "available_copies": 4
+  }
+]
