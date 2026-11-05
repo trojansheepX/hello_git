@@ -1,0 +1,22 @@
+[
+  {
+    "code": "WELCOME10",
+    "discount_percent": 10,
+    "active": true
+  },
+  {
+    "code": "LEARN10",
+    "discount_percent": 10,
+    "active": true
+  },
+  {
+    "code": "STUDENT10",
+    "discount_percent": 10,
+    "active": true
+  },
+  {
+    "code": "EXPIRED10",
+    "discount_percent": 10,
+    "active": false
+  }
+]

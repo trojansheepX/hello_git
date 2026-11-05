@@ -1,0 +1,34 @@
+[
+  {
+    "id": "W101",
+    "title": "Python Automation Essentials",
+    "topics": ["Python", "automation", "scripts"],
+    "duration_days": 2,
+    "mode": "Online",
+    "fee_per_person_inr": 3000
+  },
+  {
+    "id": "W102",
+    "title": "Generative AI Fundamentals",
+    "topics": ["Generative AI", "prompting", "LLMs"],
+    "duration_days": 1,
+    "mode": "Online",
+    "fee_per_person_inr": 4000
+  },
+  {
+    "id": "W103",
+    "title": "Power BI Dashboards",
+    "topics": ["Power BI", "dashboards", "analytics"],
+    "duration_days": 2,
+    "mode": "Classroom",
+    "fee_per_person_inr": 3500
+  },
+  {
+    "id": "W104",
+    "title": "Azure AI Basics",
+    "topics": ["Azure", "AI", "cloud"],
+    "duration_days": 2,
+    "mode": "Online",
+    "fee_per_person_inr": 4500
+  }
+]
