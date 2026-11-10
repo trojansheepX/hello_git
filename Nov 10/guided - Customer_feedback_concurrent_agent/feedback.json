@@ -1,0 +1,146 @@
+[
+  {
+    "id": "F001",
+    "rating": 5,
+    "area": "Checkout",
+    "comment": "Checkout was quick and the discount code worked on my first try."
+  },
+  {
+    "id": "F002",
+    "rating": 2,
+    "area": "Checkout",
+    "comment": "Payment failed twice but my bank showed two temporary holds."
+  },
+  {
+    "id": "F003",
+    "rating": 4,
+    "area": "Delivery",
+    "comment": "Parcel arrived a day early and the courier was polite."
+  },
+  {
+    "id": "F004",
+    "rating": 1,
+    "area": "Delivery",
+    "comment": "Delivery arrived four days late without any tracking update."
+  },
+  {
+    "id": "F005",
+    "rating": 3,
+    "area": "Search",
+    "comment": "Search found similar items but filters reset whenever I returned to results."
+  },
+  {
+    "id": "F006",
+    "rating": 5,
+    "area": "Support",
+    "comment": "The support agent fixed my return request within ten minutes."
+  },
+  {
+    "id": "F007",
+    "rating": 2,
+    "area": "Support",
+    "comment": "I waited two days for a response about a damaged item."
+  },
+  {
+    "id": "F008",
+    "rating": 4,
+    "area": "Mobile App",
+    "comment": "App is easy to navigate and saved my preferred address."
+  },
+  {
+    "id": "F009",
+    "rating": 1,
+    "area": "Mobile App",
+    "comment": "App crashed three times when I opened the cart on Android."
+  },
+  {
+    "id": "F010",
+    "rating": 3,
+    "area": "Packaging",
+    "comment": "Product was fine, but the outer box was much bigger than needed."
+  },
+  {
+    "id": "F011",
+    "rating": 5,
+    "area": "Product Quality",
+    "comment": "The headphones sound excellent and match the listing."
+  },
+  {
+    "id": "F012",
+    "rating": 2,
+    "area": "Product Quality",
+    "comment": "Received the wrong colour, despite choosing black at checkout."
+  },
+  {
+    "id": "F013",
+    "rating": 4,
+    "area": "Returns",
+    "comment": "Pickup for my return was arranged the next morning."
+  },
+  {
+    "id": "F014",
+    "rating": 1,
+    "area": "Returns",
+    "comment": "Refund still has not arrived twelve days after my return was accepted."
+  },
+  {
+    "id": "F015",
+    "rating": 4,
+    "area": "Delivery",
+    "comment": "Tracking notifications were accurate throughout delivery."
+  },
+  {
+    "id": "F016",
+    "rating": 2,
+    "area": "Checkout",
+    "comment": "The coupon showed as valid but disappeared on the payment page."
+  },
+  {
+    "id": "F017",
+    "rating": 3,
+    "area": "Search",
+    "comment": "Categories were clear, although sorting by price was inconsistent."
+  },
+  {
+    "id": "F018",
+    "rating": 5,
+    "area": "Support",
+    "comment": "Chat support explained warranty coverage clearly."
+  },
+  {
+    "id": "F019",
+    "rating": 1,
+    "area": "Delivery",
+    "comment": "The delivery window changed twice and no explanation was provided."
+  },
+  {
+    "id": "F020",
+    "rating": 4,
+    "area": "Mobile App",
+    "comment": "The new app layout made reordering much easier."
+  },
+  {
+    "id": "F021",
+    "rating": 2,
+    "area": "Returns",
+    "comment": "Return pickup was missed and I had to contact support again."
+  },
+  {
+    "id": "F022",
+    "rating": 5,
+    "area": "Product Quality",
+    "comment": "The laptop stand feels sturdy and the dimensions were accurate."
+  },
+  {
+    "id": "F023",
+    "rating": 3,
+    "area": "Packaging",
+    "comment": "Packaging protected the item, but too much plastic was used."
+  },
+  {
+    "id": "F024",
+    "rating": 2,
+    "area": "Support",
+    "comment": "The helpdesk sent an automated reply instead of answering my billing question."
+  }
+]

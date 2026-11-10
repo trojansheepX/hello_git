@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": "W101",
+    "title": "Python Fundamentals",
+    "duration_days": 2,
+    "fee": 3000
+  },
+  {
+    "id": "W102",
+    "title": "Advanced Python",
+    "duration_days": 3,
+    "fee": 4500
+  },
+  {
+    "id": "W103",
+    "title": "Azure Fundamentals",
+    "duration_days": 2,
+    "fee": 5000
+  },
+  {
+    "id": "W104",
+    "title": "Power BI Essentials",
+    "duration_days": 2,
+    "fee": 4000
+  }
+]

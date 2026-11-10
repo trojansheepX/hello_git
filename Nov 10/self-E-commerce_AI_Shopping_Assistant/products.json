@@ -1,0 +1,258 @@
+[
+  {
+    "id": "P101",
+    "name": "NovaBook Air 14",
+    "category": "Laptop",
+    "price_inr": 52000,
+    "stock": 8,
+    "rating": 4.5
+  },
+  {
+    "id": "P102",
+    "name": "Orion Pro 15",
+    "category": "Laptop",
+    "price_inr": 68000,
+    "stock": 3,
+    "rating": 4.8
+  },
+  {
+    "id": "P103",
+    "name": "PixelEdge Lite 13",
+    "category": "Laptop",
+    "price_inr": 41000,
+    "stock": 0,
+    "rating": 4.1
+  },
+  {
+    "id": "P104",
+    "name": "Atlas Work 14",
+    "category": "Laptop",
+    "price_inr": 59000,
+    "stock": 12,
+    "rating": 4.7
+  },
+  {
+    "id": "P105",
+    "name": "TerraBook Studio 16",
+    "category": "Laptop",
+    "price_inr": 92000,
+    "stock": 5,
+    "rating": 4.9
+  },
+  {
+    "id": "P106",
+    "name": "SwiftCore Student 14",
+    "category": "Laptop",
+    "price_inr": 34500,
+    "stock": 20,
+    "rating": 4.2
+  },
+  {
+    "id": "P107",
+    "name": "Nova One 5G",
+    "category": "Smartphone",
+    "price_inr": 28000,
+    "stock": 15,
+    "rating": 4.4
+  },
+  {
+    "id": "P108",
+    "name": "Orion Max 5G",
+    "category": "Smartphone",
+    "price_inr": 54000,
+    "stock": 8,
+    "rating": 4.8
+  },
+  {
+    "id": "P109",
+    "name": "Cobalt Mini 5G",
+    "category": "Smartphone",
+    "price_inr": 19000,
+    "stock": 0,
+    "rating": 4.1
+  },
+  {
+    "id": "P110",
+    "name": "Terra Ultra 5G",
+    "category": "Smartphone",
+    "price_inr": 72000,
+    "stock": 4,
+    "rating": 4.9
+  },
+  {
+    "id": "P111",
+    "name": "Pulse Lite 5G",
+    "category": "Smartphone",
+    "price_inr": 16500,
+    "stock": 23,
+    "rating": 4.0
+  },
+  {
+    "id": "P112",
+    "name": "Atlas Camera 5G",
+    "category": "Smartphone",
+    "price_inr": 38000,
+    "stock": 10,
+    "rating": 4.6
+  },
+  {
+    "id": "P113",
+    "name": "NovaTab 10",
+    "category": "Tablet",
+    "price_inr": 21000,
+    "stock": 10,
+    "rating": 4.2
+  },
+  {
+    "id": "P114",
+    "name": "OrionTab Pro 12",
+    "category": "Tablet",
+    "price_inr": 46500,
+    "stock": 5,
+    "rating": 4.8
+  },
+  {
+    "id": "P115",
+    "name": "TerraPad Mini",
+    "category": "Tablet",
+    "price_inr": 17500,
+    "stock": 0,
+    "rating": 4.0
+  },
+  {
+    "id": "P116",
+    "name": "AtlasTab Work",
+    "category": "Tablet",
+    "price_inr": 32500,
+    "stock": 11,
+    "rating": 4.5
+  },
+  {
+    "id": "P117",
+    "name": "PixelView 24 FHD",
+    "category": "Monitor",
+    "price_inr": 12500,
+    "stock": 20,
+    "rating": 4.4
+  },
+  {
+    "id": "P118",
+    "name": "NovaView 27 QHD",
+    "category": "Monitor",
+    "price_inr": 24500,
+    "stock": 13,
+    "rating": 4.7
+  },
+  {
+    "id": "P119",
+    "name": "OrionView 32 4K",
+    "category": "Monitor",
+    "price_inr": 39000,
+    "stock": 3,
+    "rating": 4.8
+  },
+  {
+    "id": "P120",
+    "name": "TerraView 22 FHD",
+    "category": "Monitor",
+    "price_inr": 9900,
+    "stock": 0,
+    "rating": 4.0
+  },
+  {
+    "id": "P121",
+    "name": "EchoBeat Wireless",
+    "category": "Headphones",
+    "price_inr": 3200,
+    "stock": 30,
+    "rating": 4.3
+  },
+  {
+    "id": "P122",
+    "name": "OrionSound ANC",
+    "category": "Headphones",
+    "price_inr": 12500,
+    "stock": 6,
+    "rating": 4.8
+  },
+  {
+    "id": "P123",
+    "name": "NovaPods Studio",
+    "category": "Headphones",
+    "price_inr": 7900,
+    "stock": 15,
+    "rating": 4.6
+  },
+  {
+    "id": "P124",
+    "name": "Pulse Audio Basic",
+    "category": "Headphones",
+    "price_inr": 1800,
+    "stock": 0,
+    "rating": 3.9
+  },
+  {
+    "id": "P125",
+    "name": "PrintPro Inkjet 100",
+    "category": "Printer",
+    "price_inr": 7500,
+    "stock": 9,
+    "rating": 4.1
+  },
+  {
+    "id": "P126",
+    "name": "Atlas Laser 200",
+    "category": "Printer",
+    "price_inr": 15500,
+    "stock": 8,
+    "rating": 4.6
+  },
+  {
+    "id": "P127",
+    "name": "Terra ColorJet 300",
+    "category": "Printer",
+    "price_inr": 21000,
+    "stock": 0,
+    "rating": 4.5
+  },
+  {
+    "id": "P128",
+    "name": "SwiftPrint Home",
+    "category": "Printer",
+    "price_inr": 6200,
+    "stock": 18,
+    "rating": 4.0
+  },
+  {
+    "id": "P129",
+    "name": "KeyFlow Mechanical",
+    "category": "Keyboard",
+    "price_inr": 4500,
+    "stock": 12,
+    "rating": 4.7
+  },
+  {
+    "id": "P130",
+    "name": "KeyLite Wireless",
+    "category": "Keyboard",
+    "price_inr": 1200,
+    "stock": 25,
+    "rating": 4.2
+  },
+  {
+    "id": "P131",
+    "name": "SwiftMouse Wireless",
+    "category": "Mouse",
+    "price_inr": 850,
+    "stock": 40,
+    "rating": 4.1
+  },
+  {
+    "id": "P132",
+    "name": "AtlasMouse Ergonomic",
+    "category": "Mouse",
+    "price_inr": 2600,
+    "stock": 9,
+    "rating": 4.6
+  }
+]
