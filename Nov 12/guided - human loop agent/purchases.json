@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PR101",
+    "item": "Office chairs",
+    "vendor": "Cedar Office Supplies",
+    "vendor_status": "approved",
+    "quantity": 8,
+    "amount_inr": 32000,
+    "justification": "Replace damaged chairs in the customer support area"
+  },
+  {
+    "id": "PR102",
+    "item": "Developer laptops",
+    "vendor": "Orion Computing",
+    "vendor_status": "approved",
+    "quantity": 20,
+    "amount_inr": 1250000,
+    "justification": "Replace aging laptops used by the development team"
+  },
+  {
+    "id": "PR103",
+    "item": "Printer cartridges",
+    "vendor": "Cedar Office Supplies",
+    "vendor_status": "approved",
+    "quantity": 10,
+    "amount_inr": 8500,
+    "justification": "Replenish printer supplies for monthly operations"
+  },
+  {
+    "id": "PR104",
+    "item": "Network infrastructure upgrade",
+    "vendor": "Newline Networks",
+    "vendor_status": "new",
+    "quantity": 1,
+    "amount_inr": 480000,
+    "justification": "Upgrade access switches to support expanded office capacity"
+  }
+]

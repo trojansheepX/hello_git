@@ -1,0 +1,124 @@
+============================================================
+REQUEST PR101: Office chairs
+  ProcurementAgent: checking justification
+  RiskAgent: assessing purchase
+  RiskAgent: LOW
+  ApprovalGateway: automatic approval
+  SummaryAgent: preparing decision record
+
+FINAL RECORD
+PR101 -> AUTO_APPROVED
+Procurement Decision Record (Demo Only – Not a Placed Order)
+
+- **Request ID:** PR101
+- **Item:** Office chairs
+- **Vendor:** Cedar Office Supplies (status: approved)
+- **Quantity:** 8
+- **Amount:** INR 32,000
+- **Justification (summary):** Replacement of damaged chairs in the customer support area to maintain employee comfort, productivity, and service quality.
+- **Risk Assessment:** LOW
+- **Decision:** AUTO_APPROVED
+- **Decision By:** Demo approval policy
+
+**Next Steps (Demo):**
+1. Prepare a draft purchase order to Cedar Office Supplies reflecting quantity, price, and delivery terms.
+2. Confirm delivery schedule and warranty/return terms with the vendor.
+3. Plan installation and disposal of damaged chairs in line with facilities and safety policies.
+
+============================================================
+REQUEST PR102: Developer laptops
+  ProcurementAgent: checking justification
+  RiskAgent: assessing purchase
+  RiskAgent: LOW
+  ApprovalGateway: PAUSED - awaiting manager
+
+==================================================
+MANAGER APPROVAL REQUIRED
+Review PR102 | Developer laptops | INR 1,250,000 | Risk: LOW
+Procurement review: The request is justified, as replacing aging developer laptops can improve productivity, reduce downtime, and better support current development tools and workloads. Given the approved vendor status and clear operational need, the purchase appears reasonable; however, it would be prudent to confirm that these specifications align with current development requirements and any existing hardware standards.
+Type approve or reject: approve
+  SummaryAgent: preparing decision record
+
+FINAL RECORD
+PR102 -> MANAGER_APPROVED
+Procurement Decision Record (Demo – Not a Placed Order)
+
+- **Request ID:** PR102
+- **Item:** Developer laptops
+- **Vendor:** Orion Computing (status: approved)
+- **Quantity:** 20
+- **Total Amount:** ₹12,50,000
+- **Justification:** Replace aging laptops used by the development team to improve productivity, reduce downtime, and support current tools and workloads.
+- **Risk Assessment:** LOW
+- **Decision:** MANAGER_APPROVED
+- **Decision By:** Human manager
+
+**Next Steps (for demo purposes):**
+1. Confirm laptop specifications against current development requirements and hardware standards.
+2. Validate budget availability and cost center allocation.
+3. Prepare draft purchase order and route for final financial approval (if this were a real order).
+
+============================================================
+REQUEST PR103: Printer cartridges
+  ProcurementAgent: checking justification
+  RiskAgent: assessing purchase
+  RiskAgent: LOW
+  ApprovalGateway: automatic approval
+  SummaryAgent: preparing decision record
+
+FINAL RECORD
+PR103 -> AUTO_APPROVED
+**Procurement Decision Record (Demo Only — Not a Placed Order)**
+
+- **Request ID:** PR103
+- **Item:** Printer cartridges
+- **Vendor:** Cedar Office Supplies (status: approved)
+- **Quantity:** 10
+- **Amount (INR):** 8,500
+- **Justification:** Replenish printer supplies for monthly operations.
+- **Risk Level:** LOW
+- **Decision Type:** Automatic decision under demo approval policy
+- **Decision:** AUTO_APPROVED
+
+**Brief Next Steps (Demo Workflow):**
+1. Log this demo approval in the procurement tracking system, clearly marked as *non-production / demo*.
+2. Validate pricing and stock availability with the vendor (simulation only).
+3. Prepare a draft purchase order for internal review and training purposes, without issuing it to the vendor.
+4. Use this record as a reference example for testing and refining automatic approval rules.
+
+============================================================
+REQUEST PR104: Network infrastructure upgrade
+  ProcurementAgent: checking justification
+  RiskAgent: assessing purchase
+  RiskAgent: HIGH
+  ApprovalGateway: PAUSED - awaiting manager
+
+==================================================
+MANAGER APPROVAL REQUIRED
+Review PR104 | Network infrastructure upgrade | INR 480,000 | Risk: HIGH
+Procurement review: The request aligns with the stated need to support expanded office capacity, and upgrading access switches is a reasonable infrastructure investment to ensure network performance and scalability. However, since the vendor is new, due diligence on technical compliance, support terms, and competitive quotes should be confirmed before approval.
+Type approve or reject: reject
+  SummaryAgent: preparing decision record
+
+FINAL RECORD
+PR104 -> MANAGER_REJECTED
+Procurement Decision Record (Demo Only – Not a Placed Order)
+
+- **Request ID:** PR104
+- **Item:** Network infrastructure upgrade (access switches)
+- **Vendor:** Newline Networks (status: new)
+- **Quantity:** 1
+- **Amount:** ₹4,80,000
+- **Justification:** Upgrade access switches to support expanded office capacity
+- **Risk Level:** HIGH
+- **Decision:** MANAGER_REJECTED
+- **Decision Type:** Human manager decision
+
+**Rationale (summary):**
+Request is strategically aligned with office expansion needs, but the vendor is new and key due diligence items (technical compliance, support terms, competitive quotes) have not yet been fully confirmed.
+
+**Next Steps:**
+1. Conduct vendor due diligence: validate technical compliance, SLAs, and support capabilities.
+2. Obtain at least 2–3 competitive quotes from established vendors for comparison.
+3. Update justification with cost–benefit and risk mitigation details.
+4. Resubmit the request for managerial review if still required after market comparison.

@@ -1,0 +1,19 @@
+
+[
+  {
+    "id": "INC101",
+    "description": "The corporate email service is unavailable for every employee across the company."
+  },
+  {
+    "id": "INC102",
+    "description": "One employee's wireless mouse stopped working."
+  },
+  {
+    "id": "INC103",
+    "description": "The company-wide payment processing system is down and transactions are failing."
+  },
+  {
+    "id": "INC104",
+    "description": "One employee cannot print to the nearby office printer."
+  }
+]

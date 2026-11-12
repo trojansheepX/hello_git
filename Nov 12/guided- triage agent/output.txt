@@ -1,0 +1,243 @@
+============================================================
+MICROSOFT AGENT FRAMEWORK
+IT INCIDENT ROUTING SYSTEM
+Authentication: Azure Foundry API Key
+============================================================
+
+Azure Foundry configuration loaded.
+Endpoint: https://gds-foundry21.openai.azure.com/openai/v1
+Deployment: gpt-5.1
+
+Total incidents loaded: 4
+
+Azure Foundry client initialized.
+Graph workflow built successfully.
+
+============================================================
+Processing Incident: INC101
+Description: The corporate email service is unavailable for every employee across the company.
+============================================================
+
+[Triage Agent] Analyzing incident...
+[Triage Agent] Severity: HIGH
+
+[Escalation Agent] Handling HIGH-severity incident...
+
+------------------------------------------------------------
+FINAL INCIDENT RESPONSE
+------------------------------------------------------------
+
+Incident ID: INC101
+Severity: HIGH
+Assigned Agent: EscalationAgent
+
+1. **Incident Summary**  
+   - ID: INC101  
+   - Issue: Corporate email service is down company-wide; no employee can send/receive email.  
+   - Impact: All departments affected; disrupts internal/external communication, approvals, customer support, and operations.
+
+2. **Responsible Support Team**  
+   - Primary: Messaging/Email Infrastructure Team (Exchange/O365 admins or equivalent).  
+   - Supporting: Network Operations, Identity/SSO Team, Security Operations (to rule out attack), Cloud Provider Support (if SaaS).
+
+3. **Immediate Containment Actions**  
+   - Verify and document scope: confirm global impact, affected domains, clients (web, mobile, Outlook).  
+   - Check status of core components:  
+     - Email servers / cloud service health dashboard.  
+     - Authentication (AD/LDAP/SSO) and DNS records (MX, Autodiscover, SPF).  
+     - Network connectivity to email servers/service endpoints.  
+   - Disable or roll back any recent changes related to email, DNS, security policies, or network routing if suspected.  
+   - Implement temporary alternatives for critical communications:  
+     - Publish approved alternate channels (Teams/Slack, phone bridges, secure messaging portal).  
+   - Start detailed logging and capture error messages for correlation and root cause analysis.
+
+4. **Escalation Procedure**  
+   - **Level 1 (Messaging Team Lead):**  
+     - Take ownership, assign incident commander, start 24/7 coverage until resolution.  
+     - Classify as company-wide major incident and open a major-incident ticket.  
+   - **Level 2 (Cross-Functional Escalation):**  
+     - Involve Network, Identity/SSO, and Security Ops if root cause not found within 30 minutes.  
+     - Convene a technical bridge with all relevant SMEs and decision-makers.  
+   - **Level 3 (Vendor / Executive Escalation):**  
+     - Escalate to email service vendor / cloud provider support with full incident data if no concrete remediation path in 60 minutes or if vendor platform shows outage.  
+     - Notify CIO/CTO and Business Continuity Manager; consider invoking formal Business Continuity plan if outage is projected to exceed agreed SLA.  
+   - **Post-Restoration:**  
+     - Perform root cause analysis, document timeline, corrective actions, and prevention steps; present to IT leadership.
+
+5. **Communication Recommendations**  
+   - **Channels:**  
+     - Use collaboration platform (e.g., Teams/Slack), corporate intranet, SMS, and phone for updates since email is unavailable.  
+   - **Audiences & Cadence:**  
+     - All employees: short status updates every 30–60 minutes, including workarounds and expected next steps.  
+     - Executives and critical business units (Sales, Support, Finance): more detailed impact and ETA updates via direct calls or messaging.  
+   - **Content of Updates:**  
+     - Clearly state: what is known, what is not yet known, current impact, workaround options, and next planned actions.  
+     - Avoid assigning blame; focus on progress and timing.  
+   - **Closure Communication:**  
+     - Notify all staff when email is restored, any actions users must take (client restart, password changes, etc.), and when a formal incident report/RCA will be shared.
+------------------------------------------------------------
+
+============================================================
+Processing Incident: INC102
+Description: One employee's wireless mouse stopped working.
+============================================================
+
+[Triage Agent] Analyzing incident...
+[Triage Agent] Severity: LOW
+
+[Resolution Agent] Handling LOW-severity incident...
+
+------------------------------------------------------------
+FINAL INCIDENT RESPONSE
+------------------------------------------------------------
+
+Incident ID: INC102
+Severity: LOW
+Assigned Agent: ResolutionAgent
+
+Here are some simple steps the employee can try for the wireless mouse issue (INC102):
+
+1. **Check the power**
+   - Make sure the mouse has batteries installed correctly.
+   - If it already has batteries, replace them with new ones.
+   - Confirm any power switch on the mouse is turned ON.
+
+2. **Check the USB receiver**
+   - Ensure the wireless USB dongle is firmly plugged into the computer.
+   - Try moving it to a different USB port.
+   - If using a docking station, try plugging the dongle directly into the laptop.
+
+3. **Confirm the mouse is connected**
+   - Turn the mouse off, then back on.
+   - If the mouse has a “connect” or “pair” button, press it.
+   - Wait a few seconds to see if the cursor starts responding.
+
+4. **Test on another computer**
+   - Plug the mouse’s USB receiver into another computer (if available).
+   - If it works there, the issue may be with the original computer’s USB ports or settings.
+   - If it does not work on another computer, the mouse may be faulty.
+
+5. **Restart the computer**
+   - Save your work and reboot the computer.
+   - After restarting, test the mouse again.
+
+**Escalate to the help desk if:**
+- The mouse still does not work after trying all the steps above.
+- None of the USB ports recognize the mouse or other USB devices.
+- The mouse works on another computer, but not on the employee’s computer.
+------------------------------------------------------------
+
+============================================================
+Processing Incident: INC103
+Description: The company-wide payment processing system is down and transactions are failing.
+============================================================
+
+[Triage Agent] Analyzing incident...
+[Triage Agent] Severity: HIGH
+
+[Escalation Agent] Handling HIGH-severity incident...
+
+------------------------------------------------------------
+FINAL INCIDENT RESPONSE
+------------------------------------------------------------
+
+Incident ID: INC103
+Severity: HIGH
+Assigned Agent: EscalationAgent
+
+1. Incident summary  
+INC103 – Company-wide payment processing outage. All transactions are failing, impacting revenue, customers, and potentially compliance/SLAs.
+
+2. Responsible support team  
+- Primary: Payments Application Support / Finance IT  
+- Secondary: Infrastructure/Network Operations, Database Admins, Vendor/PSP support (if third-party gateway involved), Security Ops (to rule out attacks).
+
+3. Immediate containment actions  
+- Verify outage scope: internal only vs. gateway/processor vs. specific regions/channels.  
+- Suspend non-essential batch jobs hitting payment systems to reduce load.  
+- Enable payment queuing if available (store-and-forward, retry queues).  
+- Switch to backup/secondary payment processor or failover environment if configured.  
+- Disable any recent changes (code/config/db) related to payments and roll back if feasible.  
+- Increase logging and monitoring on payment gateway, API, DB, and network paths.  
+- Coordinate with Finance to enact manual/alternative payment methods where possible.
+
+4. Escalation procedure  
+- Within 5 minutes:  
+  - Incident Commander from Payments App Support assigned.  
+  - Page on-call for Payments App Support, Infra/Network, DBA, and Security Ops.  
+- Within 15 minutes:  
+  - Engage vendor/third-party processor support with high-priority ticket, share logs and timelines.  
+  - If failover/DR not yet active, convene quick decision call to approve DR/failover.  
+- Within 30 minutes:  
+  - Escalate to IT Director / CIO and Finance leadership for business-impact decisions.  
+  - If regulatory/SLAs impacted, notify Compliance/Legal for guidance.  
+- Ongoing:  
+  - Set 30-minute technical bridge for responders; 60-minute business-impact review with leadership.  
+  - Document all actions, changes, and decisions for post-incident review.
+
+5. Communication recommendations  
+- Internal (employees & leadership):  
+  - Immediately send status via official channels (email/Chat/IT portal) noting outage, scope, and known impacts.  
+  - Provide ETA only if supported by evidence; otherwise use time-bound updates (e.g., every 30–60 minutes).  
+- Customer-facing:  
+  - Publish service notice on status page and affected channels (web/app) indicating payment issues and any workarounds (e.g., delayed charges, alternative methods).  
+  - Coordinate messaging with Customer Support, Marketing, and Legal to ensure consistent language.  
+- After restoration:  
+  - Send incident resolution notice, outline high-level cause and confirm transaction integrity/next steps.  
+  - Schedule formal post-incident review and distribute remediation plan to stakeholders.
+------------------------------------------------------------
+
+============================================================
+Processing Incident: INC104
+Description: One employee cannot print to the nearby office printer.
+============================================================
+
+[Triage Agent] Analyzing incident...
+[Triage Agent] Severity: LOW
+
+[Resolution Agent] Handling LOW-severity incident...
+
+------------------------------------------------------------
+FINAL INCIDENT RESPONSE
+------------------------------------------------------------
+
+Incident ID: INC104
+Severity: LOW
+Assigned Agent: ResolutionAgent
+
+Here are some simple steps the employee can try for incident INC104:
+
+1. **Check printer selection**  
+   - Make sure the correct office printer is selected in the print dialog.  
+   - Try re-selecting it or choose it from the list again, then attempt to print.
+
+2. **Confirm the printer is online and ready**  
+   - Look at the printer’s display: check for errors like “Offline,” “Paper Jam,” “Out of Toner,” or “No Paper.”  
+   - If it’s showing an error, follow the on-screen instructions (add paper, clear jam, etc.) and then try printing again.
+
+3. **Verify network/Wi‑Fi connection on the computer**  
+   - Ensure the computer is connected to the company network (Wi‑Fi or wired).  
+   - If using Wi‑Fi, reconnect to the office network and try printing again.  
+   - If using a cable, make sure it is securely plugged in.
+
+4. **Restart the printer and the computer**  
+   - Turn the printer off, wait 10 seconds, then turn it back on.  
+   - Restart the computer.  
+   - After both are back on, try printing a small test document (like a one-page file).
+
+5. **Remove and re-add the printer**  
+   - Go to the computer’s printer settings.  
+   - Remove the nearby office printer from the list.  
+   - Add it again using the standard company printer setup method, then test printing.
+
+**Escalate to the help desk if:**
+
+- The printer does not show up in the list of available printers.  
+- The employee gets repeated error messages (e.g., “Access denied,” “Printer not found,” or “Print job failed”) after following the steps above.  
+- Other employees can print to that same printer, but this employee still cannot.  
+- The printer shows no obvious error, but no documents print after several attempts.
+------------------------------------------------------------
+
+============================================================
+ALL INCIDENTS PROCESSED
+============================================================

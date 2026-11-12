@@ -1,0 +1,489 @@
+================================================================
+  E-COMMERCE RETURNS & REFUND PROCESSING  (SIMULATION)
+  Microsoft Agent Framework + Azure AI Foundry
+================================================================
+
+Loaded 10 return request(s) from returns.json
+Deployment: gpt-5.1
+
+================================================================
+  REQUEST RET201: Wireless Keyboard
+================================================================
+  [ReturnRequest] received RET201 (REFUND, INR 1,499)
+  [EligibilityAgent] deterministic rules 1-5: 5/5 passed
+  [RiskAgent] AI=LOW, rule floor=LOW -> LOW
+  [ApprovalGateway] all 6 rules passed -> AUTO_APPROVED
+  [CustomerResponseAgent] drafting message for AUTO_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET201 -> AUTO_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET201",
+  "order_id": "ORD-7301",
+  "product": "Wireless Keyboard",
+  "request_type": "REFUND",
+  "requested_amount_inr": 1499,
+  "eligibility_findings": "This return request meets all eligibility requirements and is approved. The amount is below INR 25,000, the request is within 30 days of delivery, the invoice is available, the item is unopened (which satisfies the condition even without photos), and there have been fewer than 3 returns in the last 90 days.",
+  "eligibility_issues": [],
+  "risk_assessment": {
+    "level": "LOW",
+    "summary": "Low-value unopened item with a plausible reason for return and no recent return history; lack of photo evidence is not concerning in this context.",
+    "flags": []
+  },
+  "approval_route": "Automatic",
+  "final_decision": "AUTO_APPROVED",
+  "decided_by": "Deterministic return policy",
+  "customer_communication_draft": "Subject: Update on Your Return Request RET201 (Order ORD-7301)\n\nDear Customer,\n\nThank you for contacting us about your Wireless Keyboard return (ordered the wrong keyboard layout).\n\nYour request for a refund has been approved, and the next steps for processing your refund will follow shortly. If we need any additional information or action from you, we will let you know.\n\nIf you have any questions in the meantime, please reply to this email and we’ll be happy to help.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET202: Gaming Laptop
+================================================================
+  [ReturnRequest] received RET202 (REFUND, INR 79,999)
+  [EligibilityAgent] deterministic rules 1-5: 3/5 passed
+  [RiskAgent] AI=MEDIUM, rule floor=HIGH -> HIGH
+  [ApprovalGateway] 3 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET202  (order ORD-7302)
+  Item       : Gaming Laptop [Computers]
+  Type       : REFUND
+  Amount     : INR 79,999
+  Reason     : Performance does not meet expectations
+  Eligibility issues:
+    - 1. Amount below INR 25,000 - FAILED (INR 79,999)
+    - 4. Unopened, or damaged with photos - FAILED (condition=USED, photos=yes)
+    - 6. No HIGH-risk concern - FAILED (risk level HIGH)
+  Risk level : HIGH
+  Risk assessment: High refund amount and used condition raise some concern, but the presence of invoice, photo evidence, and no recent return history suggest only moderate risk rather than clear fraud or abuse.
+----------------------------------------------------------------
+  Type approve or reject: reject
+reject
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: reject
+  [CustomerResponseAgent] drafting message for MANAGER_REJECTED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET202 -> MANAGER_REJECTED
+----------------------------------------------------------------
+{
+  "request_id": "RET202",
+  "order_id": "ORD-7302",
+  "product": "Gaming Laptop",
+  "request_type": "REFUND",
+  "requested_amount_inr": 79999,
+  "eligibility_findings": "This return request is **not eligible** under the stated policy. It fails the amount rule because the refund request is for INR 79,999 (above the INR 25,000 limit), and it also fails the item condition rule because the laptop is used and not described as unopened or damaged with supporting photos, despite photo evidence being available.",
+  "eligibility_issues": [
+    "1. Amount below INR 25,000 - FAILED (INR 79,999)",
+    "4. Unopened, or damaged with photos - FAILED (condition=USED, photos=yes)",
+    "6. No HIGH-risk concern - FAILED (risk level HIGH)"
+  ],
+  "risk_assessment": {
+    "level": "HIGH",
+    "summary": "High refund amount and used condition raise some concern, but the presence of invoice, photo evidence, and no recent return history suggest only moderate risk rather than clear fraud or abuse.",
+    "flags": [
+      "high-value request",
+      "item has been used"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_REJECTED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Update on Your Return Request RET202 for Order ORD-7302\n\nDear Customer,\n\nThank you for contacting us about returning your Gaming Laptop for a refund.\n\nAfter reviewing your request RET202 for order ORD-7302, we are unable to approve the refund. Based on our return policy, refunds are not available for this product because:\n- The amount is below INR 25,000 (INR 79,999), and  \n- The item is used, with photos provided showing its condition.\n\nWe’re sorry we can’t offer the outcome you were hoping for.\n\nIf you have any further questions, please reply to this email.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET203: Ceramic Dinner Set
+================================================================
+  [ReturnRequest] received RET203 (REPLACEMENT, INR 2,499)
+  [EligibilityAgent] deterministic rules 1-5: 5/5 passed
+  [RiskAgent] AI=LOW, rule floor=LOW -> LOW
+  [ApprovalGateway] all 6 rules passed -> AUTO_APPROVED
+  [CustomerResponseAgent] drafting message for AUTO_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET203 -> AUTO_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET203",
+  "order_id": "ORD-7303",
+  "product": "Ceramic Dinner Set",
+  "request_type": "REPLACEMENT",
+  "requested_amount_inr": 2499,
+  "eligibility_findings": "This return request meets all eligibility requirements for a replacement. The amount is below INR 25,000, it was requested within 30 days of delivery, the invoice is available, the item is damaged with photo evidence, and the customer has fewer than 3 returns in the last 90 days.",
+  "eligibility_issues": [],
+  "risk_assessment": {
+    "level": "LOW",
+    "summary": "Single recent return, moderate value, and consistent damage claim with both invoice and photo evidence available indicate low fraud or abuse risk.",
+    "flags": []
+  },
+  "approval_route": "Automatic",
+  "final_decision": "AUTO_APPROVED",
+  "decided_by": "Deterministic return policy",
+  "customer_communication_draft": "Subject: Your Return Request RET203 for Order ORD-7303\n\nDear Customer,\n\nThank you for contacting us about your Ceramic Dinner Set from order ORD-7303. We’re sorry to hear that two plates arrived cracked.\n\nYour replacement request (RET203) has been approved. The next steps to arrange your replacement items will now follow, and we’ll update you with further details shortly.\n\nIf you have any photos of the damaged plates, you may reply to this email with them to help us improve our packaging.\n\nThank you for your patience.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET204: Travel Suitcase
+================================================================
+  [ReturnRequest] received RET204 (REFUND, INR 4,599)
+  [EligibilityAgent] deterministic rules 1-5: 4/5 passed
+  [RiskAgent] AI=MEDIUM, rule floor=HIGH -> HIGH
+  [ApprovalGateway] 2 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET204  (order ORD-7304)
+  Item       : Travel Suitcase [Luggage]
+  Type       : REFUND
+  Amount     : INR 4,599
+  Reason     : Wheel is broken but no photo has been uploaded
+  Eligibility issues:
+    - 4. Unopened, or damaged with photos - FAILED (condition=DAMAGED, photos=no)
+    - 6. No HIGH-risk concern - FAILED (risk level HIGH)
+  Risk level : HIGH
+  Risk assessment: Damage is claimed soon after delivery with a reasonable refund amount and no prior return history, but the lack of photo evidence for a "broken wheel" introduces some concern.
+----------------------------------------------------------------
+  Type approve or reject: approve
+approve
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: approve
+  [CustomerResponseAgent] drafting message for MANAGER_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET204 -> MANAGER_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET204",
+  "order_id": "ORD-7304",
+  "product": "Travel Suitcase",
+  "request_type": "REFUND",
+  "requested_amount_inr": 4599,
+  "eligibility_findings": "This return request is **not eligible**, because it fails one required condition. While the amount, timing, invoice availability, and previous returns all meet the policy, rule 4 is not satisfied: the item is damaged but **no photo evidence is available**, so it does not meet the “unopened, or damaged with supporting photographs” requirement.",
+  "eligibility_issues": [
+    "4. Unopened, or damaged with photos - FAILED (condition=DAMAGED, photos=no)",
+    "6. No HIGH-risk concern - FAILED (risk level HIGH)"
+  ],
+  "risk_assessment": {
+    "level": "HIGH",
+    "summary": "Damage is claimed soon after delivery with a reasonable refund amount and no prior return history, but the lack of photo evidence for a \"broken wheel\" introduces some concern.",
+    "flags": [
+      "damage claimed without photo evidence"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_APPROVED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Update on Your Return Request RET204 (Order ORD-7304)\n\nDear Customer,\n\nThank you for contacting us regarding your Travel Suitcase from order ORD-7304.\n\nYour return request (ID: RET204) has been approved for a refund based on the issue you reported with the broken wheel. The next steps for your refund will follow in line with our standard return process.\n\nIf we need any additional information or if you must send the item back, we will contact you with instructions.\n\nPlease let us know if you have any questions.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET205: Yoga Mat
+================================================================
+  [ReturnRequest] received RET205 (REFUND, INR 1,999)
+  [EligibilityAgent] deterministic rules 1-5: 4/5 passed
+  [RiskAgent] AI=LOW, rule floor=MEDIUM -> MEDIUM
+  [ApprovalGateway] 1 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET205  (order ORD-7305)
+  Item       : Yoga Mat [Fitness]
+  Type       : REFUND
+  Amount     : INR 1,999
+  Reason     : No longer needed
+  Eligibility issues:
+    - 2. Within 30 days of delivery - FAILED (44 days since delivery)
+  Risk level : MEDIUM
+  Risk assessment: Single low-value refund for an unopened item with invoice available and no recent return history; lack of photo evidence is not unusual given the context.
+----------------------------------------------------------------
+  Type approve or reject: approve
+approve
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: approve
+  [CustomerResponseAgent] drafting message for MANAGER_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET205 -> MANAGER_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET205",
+  "order_id": "ORD-7305",
+  "product": "Yoga Mat",
+  "request_type": "REFUND",
+  "requested_amount_inr": 1999,
+  "eligibility_findings": "This return request is **not eligible** under the stated policy because it fails the “within 30 days of delivery” rule: the request was made 44 days after delivery. All other conditions (amount under INR 25,000, invoice available, item unopened, and fewer than 3 returns in 90 days) are satisfied, but the late request disqualifies it.",
+  "eligibility_issues": [
+    "2. Within 30 days of delivery - FAILED (44 days since delivery)"
+  ],
+  "risk_assessment": {
+    "level": "MEDIUM",
+    "summary": "Single low-value refund for an unopened item with invoice available and no recent return history; lack of photo evidence is not unusual given the context.",
+    "flags": [
+      "outside the return window"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_APPROVED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Update on Your Return Request RET205 (Order ORD-7305)\n\nDear Customer,\n\nThank you for contacting us about your Yoga Mat from order ORD-7305.\n\nYour return request RET205 has been approved for a refund based on the reason “No longer needed.” Please follow any return instructions you have already received, or let us know if you need them resent.\n\nOnce the return is received and checked in, the next steps for your refund will follow in line with our standard process.\n\nIf you have any questions, we’re happy to help.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET206: Desk Lamp
+================================================================
+  [ReturnRequest] received RET206 (REPLACEMENT, INR 3,299)
+  [EligibilityAgent] deterministic rules 1-5: 4/5 passed
+  [RiskAgent] AI=MEDIUM, rule floor=HIGH -> HIGH
+  [ApprovalGateway] 2 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET206  (order ORD-7306)
+  Item       : Desk Lamp [Home Office]
+  Type       : REPLACEMENT
+  Amount     : INR 3,299
+  Reason     : Incorrect color delivered
+  Eligibility issues:
+    - 5. Fewer than 3 returns in 90 days - FAILED (4 previous returns)
+    - 6. No HIGH-risk concern - FAILED (risk level HIGH)
+  Risk level : HIGH
+  Risk assessment: Reason, condition, and evidence are consistent, but four returns in the last 90 days indicate an unusually high return frequency that raises moderate concern.
+----------------------------------------------------------------
+  Type approve or reject: reject
+reject
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: reject
+  [CustomerResponseAgent] drafting message for MANAGER_REJECTED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET206 -> MANAGER_REJECTED
+----------------------------------------------------------------
+{
+  "request_id": "RET206",
+  "order_id": "ORD-7306",
+  "product": "Desk Lamp",
+  "request_type": "REPLACEMENT",
+  "requested_amount_inr": 3299,
+  "eligibility_findings": "This return request is **not eligible** because it fails rule 5: the customer has **4 previous returns in the last 90 days**, exceeding the allowed limit of fewer than 3. All other conditions are satisfied (amount below INR 25,000, requested within 30 days, invoice available, item unopened with photo evidence), but the prior-returns threshold exception prevents approval.",
+  "eligibility_issues": [
+    "5. Fewer than 3 returns in 90 days - FAILED (4 previous returns)",
+    "6. No HIGH-risk concern - FAILED (risk level HIGH)"
+  ],
+  "risk_assessment": {
+    "level": "HIGH",
+    "summary": "Reason, condition, and evidence are consistent, but four returns in the last 90 days indicate an unusually high return frequency that raises moderate concern.",
+    "flags": [
+      "unusual return frequency"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_REJECTED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Update on Your Return Request RET206 (Order ORD-7306)\n\nDear Customer,\n\nThank you for contacting us about your Desk Lamp replacement request.\n\nAfter reviewing your request RET206 for order ORD-7306, we’re unable to approve a replacement. This is because our return policy limits eligibility when there have been multiple recent returns, and our records show 4 previous returns in the last 90 days.\n\nWe understand this may be disappointing and appreciate your understanding.\n\nIf you have any questions, please reply to this email and we’ll be happy to help.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET207: Coffee Grinder
+================================================================
+  [ReturnRequest] received RET207 (REFUND, INR 6,999)
+  [EligibilityAgent] deterministic rules 1-5: 4/5 passed
+  [RiskAgent] AI=LOW, rule floor=HIGH -> HIGH
+  [ApprovalGateway] 2 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET207  (order ORD-7307)
+  Item       : Coffee Grinder [Kitchen Appliances]
+  Type       : REFUND
+  Amount     : INR 6,999
+  Reason     : Received duplicate gift
+  Eligibility issues:
+    - 3. Invoice available - FAILED (invoice missing)
+    - 6. No HIGH-risk concern - FAILED (risk level HIGH)
+  Risk level : HIGH
+  Risk assessment: Single moderate-value refund request with no prior returns and a plausible reason; missing invoice and photos raise minor concern but not enough to suggest likely fraud or abuse.
+----------------------------------------------------------------
+  Type approve or reject: approve
+approve
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: approve
+  [CustomerResponseAgent] drafting message for MANAGER_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET207 -> MANAGER_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET207",
+  "order_id": "ORD-7307",
+  "product": "Coffee Grinder",
+  "request_type": "REFUND",
+  "requested_amount_inr": 6999,
+  "eligibility_findings": "This return request is **not eligible** because it fails the invoice requirement. Although the amount is below INR 25,000, the request is within 30 days, the item is unopened, and there are fewer than 3 returns in the last 90 days, the deterministic rules show the invoice is missing, which is a required condition for approval.",
+  "eligibility_issues": [
+    "3. Invoice available - FAILED (invoice missing)",
+    "6. No HIGH-risk concern - FAILED (risk level HIGH)"
+  ],
+  "risk_assessment": {
+    "level": "HIGH",
+    "summary": "Single moderate-value refund request with no prior returns and a plausible reason; missing invoice and photos raise minor concern but not enough to suggest likely fraud or abuse.",
+    "flags": [
+      "missing invoice"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_APPROVED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Return Request RET207 for Order ORD-7307\n\nDear Customer,\n\nThank you for contacting us about your Coffee Grinder from order ORD-7307.\n\nYour refund request (ID: RET207), submitted because you received a duplicate gift, has been approved. The next steps for your refund will follow soon, in line with our standard process.\n\nIf we need any additional information, we will reach out to you.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET208: Sketchbook Set
+================================================================
+  [ReturnRequest] received RET208 (REFUND, INR 1,099)
+  [EligibilityAgent] deterministic rules 1-5: 5/5 passed
+  [RiskAgent] AI=LOW, rule floor=LOW -> LOW
+  [ApprovalGateway] all 6 rules passed -> AUTO_APPROVED
+  [CustomerResponseAgent] drafting message for AUTO_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET208 -> AUTO_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET208",
+  "order_id": "ORD-7308",
+  "product": "Sketchbook Set",
+  "request_type": "REFUND",
+  "requested_amount_inr": 1099,
+  "eligibility_findings": "This return request **meets all eligibility requirements** for a refund. The amount is below INR 25,000, it was requested within 30 days of delivery, an invoice is available, the item is unopened (which satisfies the condition even without photos), and the customer has fewer than 3 returns in the last 90 days.",
+  "eligibility_issues": [],
+  "risk_assessment": {
+    "level": "LOW",
+    "summary": "Low-value stationery item with plausible reason, normal return frequency, and invoice available; lack of photos is not concerning for an unopened product.",
+    "flags": []
+  },
+  "approval_route": "Automatic",
+  "final_decision": "AUTO_APPROVED",
+  "decided_by": "Deterministic return policy",
+  "customer_communication_draft": "Subject: Your Return Request RET208 for Order ORD-7308\n\nDear Customer,\n\nThank you for contacting us about your Sketchbook Set from order ORD-7308.\n\nYour return request RET208 for a refund has been approved. Since the size was ordered incorrectly, please follow the return instructions that will be sent to you shortly. Once we receive and inspect the item, the next steps for your refund will follow.\n\nIf you have any questions or need help with the process, please reply to this email.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET209: Smartwatch
+================================================================
+  [ReturnRequest] received RET209 (REFUND, INR 18,900)
+  [EligibilityAgent] deterministic rules 1-5: 4/5 passed
+  [RiskAgent] AI=LOW, rule floor=MEDIUM -> MEDIUM
+  [ApprovalGateway] 1 rule(s) failed -> PAUSED, awaiting manager
+
+================================================================
+  MANAGER APPROVAL REQUIRED (workflow paused)
+================================================================
+  Request ID : RET209  (order ORD-7309)
+  Item       : Smartwatch [Wearables]
+  Type       : REFUND
+  Amount     : INR 18,900
+  Reason     : Battery life below expectation
+  Eligibility issues:
+    - 4. Unopened, or damaged with photos - FAILED (condition=USED, photos=yes)
+  Risk level : MEDIUM
+  Risk assessment: Single refund request for a mid-value used smartwatch with plausible performance-related reason and supporting invoice/photo evidence, and no recent return history.
+----------------------------------------------------------------
+  Type approve or reject: approve
+approve
+  Resuming workflow ...
+  [ApprovalGateway] RESUMED with manager decision: approve
+  [CustomerResponseAgent] drafting message for MANAGER_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET209 -> MANAGER_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET209",
+  "order_id": "ORD-7309",
+  "product": "Smartwatch",
+  "request_type": "REFUND",
+  "requested_amount_inr": 18900,
+  "eligibility_findings": "This return request is **not eligible** under the policy because rule 4 fails: the item is in **USED** condition and, although photos are provided, there is no qualifying damage; the policy only allows returns for items that are unopened or damaged with photos. All other rules (amount below INR 25,000, within 30 days, invoice available, and fewer than 3 returns in 90 days) are satisfied.",
+  "eligibility_issues": [
+    "4. Unopened, or damaged with photos - FAILED (condition=USED, photos=yes)"
+  ],
+  "risk_assessment": {
+    "level": "MEDIUM",
+    "summary": "Single refund request for a mid-value used smartwatch with plausible performance-related reason and supporting invoice/photo evidence, and no recent return history.",
+    "flags": [
+      "item has been used"
+    ]
+  },
+  "approval_route": "Human Review",
+  "final_decision": "MANAGER_APPROVED",
+  "decided_by": "Human manager",
+  "customer_communication_draft": "Subject: Your Return Request RET209 for Order ORD-7309\n\nDear Customer,\n\nThank you for contacting us about your Smartwatch return (Request ID: RET209, Order ID: ORD-7309).\n\nYour request for a refund has been approved based on the reason provided: battery life below expectation. The next steps for your refund will follow, and you will receive a separate update with further instructions and timing.\n\nIf you have any questions in the meantime, please reply to this email and we’ll be happy to help.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  REQUEST RET210: Floor Mirror
+================================================================
+  [ReturnRequest] received RET210 (REPLACEMENT, INR 12,500)
+  [EligibilityAgent] deterministic rules 1-5: 5/5 passed
+  [RiskAgent] AI=LOW, rule floor=LOW -> LOW
+  [ApprovalGateway] all 6 rules passed -> AUTO_APPROVED
+  [CustomerResponseAgent] drafting message for AUTO_APPROVED
+
+----------------------------------------------------------------
+  FINAL OUTPUT  RET210 -> AUTO_APPROVED
+----------------------------------------------------------------
+{
+  "request_id": "RET210",
+  "order_id": "ORD-7310",
+  "product": "Floor Mirror",
+  "request_type": "REPLACEMENT",
+  "requested_amount_inr": 12500,
+  "eligibility_findings": "This request **meets all eligibility requirements** for a replacement under the return policy. The amount is below INR 25,000, the request is within 30 days of delivery, the invoice is available, the item is damaged with photo evidence, and the customer has fewer than 3 returns in the last 90 days, so no exceptions apply.",
+  "eligibility_issues": [],
+  "risk_assessment": {
+    "level": "LOW",
+    "summary": "Single replacement request for a mid-value item with documented damage and supporting invoice/photo evidence, and no recent return history.",
+    "flags": []
+  },
+  "approval_route": "Automatic",
+  "final_decision": "AUTO_APPROVED",
+  "decided_by": "Deterministic return policy",
+  "customer_communication_draft": "Subject: Return Request RET210 – Order ORD-7310\n\nDear Customer,\n\nThank you for contacting us about your Floor Mirror from order ORD-7310. We’re sorry to hear the frame arrived cracked.\n\nYour replacement request (RET210) has been approved. The next steps for arranging the replacement shipment will follow shortly, and we’ll notify you with updates and any needed instructions.\n\nIf you have photos of the damage and haven’t sent them yet, please reply to this email with the images so we can improve our packaging and quality checks.\n\nThank you for your patience.\n\nBest regards,  \nCustomer Support Team",
+  "note": "SIMULATION - no payment, message or replacement executed"
+}
+
+================================================================
+  SUMMARY
+================================================================
+  RET201   Wireless Keyboard      INR   1,499  Automatic     AUTO_APPROVED
+  RET202   Gaming Laptop          INR  79,999  Human Review  MANAGER_REJECTED
+  RET203   Ceramic Dinner Set     INR   2,499  Automatic     AUTO_APPROVED
+  RET204   Travel Suitcase        INR   4,599  Human Review  MANAGER_APPROVED
+  RET205   Yoga Mat               INR   1,999  Human Review  MANAGER_APPROVED
+  RET206   Desk Lamp              INR   3,299  Human Review  MANAGER_REJECTED
+  RET207   Coffee Grinder         INR   6,999  Human Review  MANAGER_APPROVED
+  RET208   Sketchbook Set         INR   1,099  Automatic     AUTO_APPROVED
+  RET209   Smartwatch             INR  18,900  Human Review  MANAGER_APPROVED
+  RET210   Floor Mirror           INR  12,500  Automatic     AUTO_APPROVED
+
+Structured results saved to returns_results.json
+SIMULATION ONLY - no payments, messages or replacements were executed.
+
+Process finished with exit code 0
